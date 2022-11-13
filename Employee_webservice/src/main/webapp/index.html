@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+      <div class="content">
+         <div class="animated fadeIn">
+            <div class="row">
+               <div class="col-md-12">
+                
+                    
+                        <strong class="card-title">
+                           <h1 style="text-align: center; color: #b30000; font-weight: bold;">EMPLOYEE MANAGEMENT</h1>
+                        </strong>
+                        <div style="text-align: center; font-weight: bold">
+                           <a href="showNewEmployeeForm">Create New Employee</a> <br /> 
+                        </div>
+                     </div>
+                     <div>
+                        <table>
+                           <thead>
+                              <tr>
+                                 <th>Employee ID</th>
+                                 <th>Name</th>
+                                 <th>Age</th>
+                                 <th>Department</th>
+                               
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr th:each="employee:${listAll}">
+                                 <td th:text="${employee.id}">Product ID</td>
+                                 <td th:text="${employee.name}">Name</td>
+                                 <td th:text="${employee.age}">Age</td>
+                                 <td th:text="${employee.dept}">Department</td>
+                                
+                                
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+      
+   </body>
+</html>
